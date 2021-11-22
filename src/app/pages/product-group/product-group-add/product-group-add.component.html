@@ -1,0 +1,17 @@
+<h2>Ürün Grubu Ekleme</h2>
+
+<div>
+  <div>
+    <label for="name">Ürün Grubu Adı</label>
+    <input type="text" id="name" class="form-control" [(ngModel)]="model.name" >
+  </div>
+
+  <div class="alert alert-success my-2" *ngIf="isAdded">
+    Ürün Grubu Başarıyla Eklendi!
+  </div>
+
+
+  <div class="my-2">
+    <button class="btn btn-primary w-100" (click)="saveFn()">Kaydet</button>
+  </div>
+</div>

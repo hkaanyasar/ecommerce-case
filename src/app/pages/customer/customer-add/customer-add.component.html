@@ -1,0 +1,42 @@
+<h2>Müşteri Ekleme</h2>
+
+<div>
+  <div>
+    <label for="name">Müşteri Adı</label>
+    <input type="text" id="name" class="form-control" [(ngModel)]="model.name" >
+  </div>
+
+  <div>
+    <label for="email">E-posta adresi</label>
+    <input type="text" id="email" class="form-control" [(ngModel)]="model.email" >
+  </div>
+
+  <div>
+    <label for="age">Yaş</label>
+    <input type="text" id="age" class="form-control" [(ngModel)]="model.age" >
+  </div>
+
+
+  <div>
+    <label for="gsm">Telefon No</label>
+    <input type="text" id="gsm" class="form-control" [(ngModel)]="model.gsm" >
+  </div>
+
+  <div>
+    <label for="tcvkn">Müşteri TC/VKN</label>
+    <input type="text" id="tcvkn" class="form-control" [(ngModel)]="model.tcvkn" >
+  </div>
+
+  <div class="alert alert-success my-2" *ngIf="isAdded">
+    Müşteri Başarıyla Eklendi
+  </div>
+
+  <div class="alert alert-danger my-2" *ngIf="isEmpty">
+    Boş alan bırakmayınız
+  </div>
+
+
+  <div class="my-2">
+    <button class="btn btn-primary w-100" (click)="saveFn()">Kaydet</button>
+  </div>
+</div>

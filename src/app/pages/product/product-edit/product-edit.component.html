@@ -1,0 +1,22 @@
+<h2>Ürün Düzenleme: {{model.name}} </h2>
+
+<div>
+  <div >
+    <label for="name">Ürün Adı</label>
+    <input type="text" id="name" class="form-control" [(ngModel)]="model.name" >
+  </div>
+  <div >
+    <label for="productGroup">Ürün Grubu</label>
+    <select class="form-select" id="productGroup" [(ngModel)]="model.productGroupId" >
+      <option [value]="group._id" *ngFor="let group of groups"> {{group.name}} </option>
+    </select>
+  </div>
+
+  <div class="alert alert-success my-2" *ngIf="isEdited">
+    Ürün Güncellendi
+  </div>
+
+  <div class="my-2">
+    <button class="btn btn-primary w-100" (click)="updateFn()">Kaydet</button>
+  </div>
+</div>
