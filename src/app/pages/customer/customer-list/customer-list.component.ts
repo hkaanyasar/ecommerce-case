@@ -28,7 +28,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   deleteCustomer() {
-    this.apiService.deleteCustomer(this.deleteId).subscribe((response: any) => {
+    this.apiService.deleteCustomer(this.deleteId).subscribe((a: any) => {
       this.customers = this.customers.filter(elm => elm._id != this.deleteId);
       this.silHayir();
     });

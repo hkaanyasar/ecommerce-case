@@ -40,8 +40,8 @@ export class ProductEditComponent implements OnInit {
       return;
     }
 
-    this.apiService.editProduct(this.model).subscribe((res: any) => {
-      console.log(res);
+    this.apiService.editProduct(this.model).subscribe((a: any) => {
+      console.log(a);
       this.isEdited = true;
     })
 

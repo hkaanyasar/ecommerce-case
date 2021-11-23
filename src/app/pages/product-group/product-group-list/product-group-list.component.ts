@@ -28,7 +28,7 @@ export class ProductGroupListComponent implements OnInit {
   }
 
   deleteProduct() {
-    this.apiService.deleteProductGroup(this.deleteId).subscribe((response: any) => {
+    this.apiService.deleteProductGroup(this.deleteId).subscribe((a: any) => {
       this.productGroups = this.productGroups.filter(elm => elm._id != this.deleteId);
       this.silHayir();
     });

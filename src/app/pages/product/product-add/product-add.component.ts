@@ -33,8 +33,8 @@ export class ProductAddComponent implements OnInit {
       return;
     }
 
-    this.apiService.saveProduct(this.model).subscribe((res: any) => {
-      console.log(res);
+    this.apiService.saveProduct(this.model).subscribe((a) => {
+      console.log(a);
       this.isAdded = true;
       this.model = new ProductModel();
     })
